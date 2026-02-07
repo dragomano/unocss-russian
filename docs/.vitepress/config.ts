@@ -15,7 +15,7 @@ const Guides: DefaultTheme.NavItemWithLink[] = [
   { text: 'Пресеты', link: '/guide/presets' },
   { text: 'Сброс стилей', link: '/guide/style-reset' },
   { text: 'Файл конфигурации', link: '/guide/config-file' },
-  { text: 'Извлечение и безопасный список', link: '/guide/extracting' },
+  { text: 'Извлечение и белый список', link: '/guide/extracting' },
 ]
 
 const Configs: DefaultTheme.NavItemWithLink[] = [
@@ -26,7 +26,7 @@ const Configs: DefaultTheme.NavItemWithLink[] = [
   { text: 'Тема', link: '/config/theme' },
   { text: 'Экстракторы', link: '/config/extractors' },
   { text: 'Предварительная настройка', link: '/config/preflights' },
-  { text: 'Безопасный список', link: '/config/safelist' },
+  { text: 'Белый список', link: '/config/safelist' },
   { text: 'Слои', link: '/config/layers' },
   { text: 'Пресеты', link: '/config/presets' },
   { text: 'Трансформеры', link: '/config/transformers' },
@@ -65,7 +65,7 @@ const Presets: DefaultTheme.NavItemWithLink[] = [
 const Transformers: DefaultTheme.NavItemWithLink[] = [
   { text: 'Группа вариантов', link: '/transformers/variant-group' },
   { text: 'Директивы', link: '/transformers/directives' },
-  { text: 'Режим компиляции', link: '/transformers/compile-class' },
+  { text: 'Режим компиляции классов', link: '/transformers/compile-class' },
   { text: 'Режим атрибутов в JSX', link: '/transformers/attributify-jsx' },
 ]
 
@@ -264,6 +264,7 @@ const SidebarConfig: DefaultTheme.SidebarItem[] = [
 ]
 
 export default defineConfig({
+  base: '/unocss-russian/',
   lang: 'ru',
   locales: {
     root: {
@@ -306,6 +307,12 @@ export default defineConfig({
     theme: {
       light: 'vitesse-light',
       dark: 'vitesse-dark',
+    },
+    container: {
+      tipLabel: 'СОВЕТ',
+      warningLabel: 'ПРЕДУПРЕЖДЕНИЕ',
+      dangerLabel: 'ОПАСНОСТЬ',
+      infoLabel: 'ИНФОРМАЦИЯ',
     },
     codeTransformers: [
       transformerTwoslash({
@@ -367,16 +374,14 @@ export default defineConfig({
     sidebar: {
       '/guide/': SidebarGuide,
       '/integrations/': SidebarGuide,
-
       '/tools/': SidebarPresets,
       '/presets/': SidebarPresets,
       '/transformers/': SidebarPresets,
       '/extractors/': SidebarPresets,
-
       '/config/': SidebarConfig,
     },
     editLink: {
-      pattern: 'https://github.com/unocss/unocss/edit/main/docs/:path',
+      pattern: 'https://github.com/dragomano/unocss-russian/edit/main/docs/:path',
       text: 'Предложить изменения для этой страницы',
     },
     socialLinks: [
@@ -386,7 +391,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Распространяется по лицензии MIT.',
-      copyright: '© 2021-PRESENT Anthony Fu',
+      copyright: '© 2021 — настоящее время, Anthony Fu',
     },
   },
 })
