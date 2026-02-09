@@ -25,7 +25,7 @@ const Configs: DefaultTheme.NavItemWithLink[] = [
   { text: 'Шорткаты', link: '/config/shortcuts' },
   { text: 'Тема', link: '/config/theme' },
   { text: 'Экстракторы', link: '/config/extractors' },
-  { text: 'Предварительная настройка', link: '/config/preflights' },
+  { text: 'Префлайты', link: '/config/preflights' },
   { text: 'Белый список', link: '/config/safelist' },
   { text: 'Слои', link: '/config/layers' },
   { text: 'Пресеты', link: '/config/presets' },
