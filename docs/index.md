@@ -7,7 +7,7 @@ hero:
     src: /logo.svg
     alt: UnoCSS
   name: "UnoCSS"
-  text: Атомарный CSS-движок с мгновенной генерацией по запросу
+  text: Мгновенный атомарный CSS
   tagline: Настраиваемый · Мощный · Быстрый · Приятный
   actions:
     - theme: brand
