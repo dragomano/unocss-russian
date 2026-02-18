@@ -65,21 +65,21 @@ const Presets: DefaultTheme.NavItemWithLink[] = [
 const Transformers: DefaultTheme.NavItemWithLink[] = [
   { text: 'Группа вариантов', link: '/transformers/variant-group' },
   { text: 'Директивы', link: '/transformers/directives' },
-  { text: 'Режим компиляции классов', link: '/transformers/compile-class' },
-  { text: 'Режим атрибутов в JSX', link: '/transformers/attributify-jsx' },
+  { text: 'Компиляция классов', link: '/transformers/compile-class' },
+  { text: 'Атрибуты без значений', link: '/transformers/attributify-jsx' },
 ]
 
 const Extractors: DefaultTheme.NavItemWithLink[] = [
-  { text: 'Pug Extractor', link: '/extractors/pug' },
-  { text: 'MDC Extractor', link: '/extractors/mdc' },
-  { text: 'Svelte Extractor', link: '/extractors/svelte' },
-  { text: 'Arbitrary Variants Extractor', link: '/extractors/arbitrary-variants' },
+  { text: 'Экстрактор Pug', link: '/extractors/pug' },
+  { text: 'Экстрактор MDC', link: '/extractors/mdc' },
+  { text: 'Экстрактор Svelte', link: '/extractors/svelte' },
+  { text: 'Экстрактор произвольных вариантов ', link: '/extractors/arbitrary-variants' },
 ]
 
 const Tools: DefaultTheme.NavItemWithLink[] = [
   { text: 'Инспектор', link: '/tools/inspector' },
   { text: 'Core', link: '/tools/core' },
-  { text: 'Autocomplete', link: '/tools/autocomplete' },
+  { text: 'Автодополнение', link: '/tools/autocomplete' },
 ]
 
 const Resources: DefaultTheme.NavItemWithLink[] = [
