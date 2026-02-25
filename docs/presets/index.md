@@ -38,10 +38,10 @@
 | [@unocss/extractor-svelte](/extractors/svelte)                         | Экстрактор для Svelte                                  |
 | [@unocss/extractor-arbitrary-variants](/extractors/arbitrary-variants) | Экстрактор для поддержки произвольных вариантов утилит |
 
-# Сообщество {#community}
+## Сообщество {#community}
 
 <p align="center">
-  <img src="https://avatars.githubusercontent.com/unocss-community" width='150' />
+  <img src="https://avatars.githubusercontent.com/unocss-community" width='150' alt="Логотип сообщества UnoCSS" />
 </p>
 
 Мы горячо приветствуем всех желающих присоединиться и помочь в развитии [сообщества UnoCSS](https://github.com/unocss-community). Вы можете использовать и делиться ресурсами, связанными с UnoCSS, в репозитории [Awesome UnoCSS](https://github.com/unocss-community/awesome-unocss).
