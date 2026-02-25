@@ -291,8 +291,10 @@ const config = {
 
 Если вы хотите получить такое же поведение при использовании препроцессора, вы должны вручную установить опцию `combine` в зависимости от окружения. Один из способов сделать это — установить [cross-env](https://www.npmjs.com/package/cross-env) и обновить ваш dev-скрипт следующим образом:
 
-```
-"dev": "cross-env NODE_ENV=development vite dev"
+```json
+{
+  "dev": "cross-env NODE_ENV=development vite dev"
+}
 ```
 
 Затем скорректируйте ваш `svelte.config.js`:
