@@ -9,7 +9,13 @@ const ogImage = `${ogUrl}og.png#1`
 const title = 'UnoCSS'
 const description = 'Атомарный CSS-движок с мгновенной генерацией по запросу'
 
-const Guides: DefaultTheme.NavItemWithLink[] = [
+type LinkItem = {
+  text: string
+  link: string
+  target?: string
+}
+
+const Guides: LinkItem[] = [
   { text: 'Подготовка', link: '/guide/' },
   { text: 'Почему UnoCSS?', link: '/guide/why' },
   { text: 'Пресеты', link: '/guide/presets' },
@@ -18,7 +24,7 @@ const Guides: DefaultTheme.NavItemWithLink[] = [
   { text: 'Извлечение и белый список', link: '/guide/extracting' },
 ]
 
-const Configs: DefaultTheme.NavItemWithLink[] = [
+const Configs: LinkItem[] = [
   { text: 'Обзор', link: '/config/' },
   { text: 'Правила', link: '/config/rules' },
   { text: 'Варианты', link: '/config/variants' },
@@ -33,7 +39,7 @@ const Configs: DefaultTheme.NavItemWithLink[] = [
   { text: 'Автодополнение', link: '/config/autocomplete' },
 ]
 
-const Integrations: DefaultTheme.NavItemWithLink[] = [
+const Integrations: LinkItem[] = [
   { text: 'Vite', link: '/integrations/vite' },
   { text: 'Nuxt', link: '/integrations/nuxt' },
   { text: 'Next', link: '/integrations/next' },
@@ -50,7 +56,7 @@ const Integrations: DefaultTheme.NavItemWithLink[] = [
   { text: 'Расширение Zed', link: '/integrations/zed' },
 ]
 
-const Presets: DefaultTheme.NavItemWithLink[] = [
+const Presets: LinkItem[] = [
   { text: 'Mini', link: '/presets/mini' },
   { text: 'Wind3', link: '/presets/wind3' },
   { text: 'Wind4', link: '/presets/wind4' },
@@ -63,33 +69,33 @@ const Presets: DefaultTheme.NavItemWithLink[] = [
   { text: 'Конвертация rem в px', link: '/presets/rem-to-px' },
 ]
 
-const Transformers: DefaultTheme.NavItemWithLink[] = [
+const Transformers: LinkItem[] = [
   { text: 'Группа вариантов', link: '/transformers/variant-group' },
   { text: 'Директивы', link: '/transformers/directives' },
   { text: 'Компиляция классов', link: '/transformers/compile-class' },
   { text: 'Атрибуты без значений', link: '/transformers/attributify-jsx' },
 ]
 
-const Extractors: DefaultTheme.NavItemWithLink[] = [
+const Extractors: LinkItem[] = [
   { text: 'Экстрактор Pug', link: '/extractors/pug' },
   { text: 'Экстрактор MDC', link: '/extractors/mdc' },
   { text: 'Экстрактор Svelte', link: '/extractors/svelte' },
   { text: 'Экстрактор произвольных вариантов ', link: '/extractors/arbitrary-variants' },
 ]
 
-const Tools: DefaultTheme.NavItemWithLink[] = [
+const Tools: LinkItem[] = [
   { text: 'Инспектор', link: '/tools/inspector' },
   { text: 'Core', link: '/tools/core' },
   { text: 'Автодополнение', link: '/tools/autocomplete' },
 ]
 
-const Resources: DefaultTheme.NavItemWithLink[] = [
+const Resources: LinkItem[] = [
   { text: 'Интерактив', link: '/interactive/', target: '_blank' },
   { text: 'Песочница', link: '/play/', target: '_blank' },
   { text: 'Учебник', link: 'https://tutorial.unocss.dev/', target: '_blank' },
 ]
 
-const Introes: DefaultTheme.NavItemWithLink[] = [
+const Introes: LinkItem[] = [
   { text: 'Команда', link: '/team' },
 ]
 
