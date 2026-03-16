@@ -1,8 +1,13 @@
+import { createRequire } from 'node:module'
+import { readFileSync } from 'node:fs'
 import type { DefaultTheme } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
-import { version } from '../package.json'
+
+const require = createRequire(import.meta.url)
+const unoPkgPath = require.resolve('unocss/package.json')
+const { version } = JSON.parse(readFileSync(unoPkgPath, 'utf-8'))
 
 const ogUrl = 'https://dragomano.github.io/unocss-russian/'
 const ogImage = `${ogUrl}og.png#1`
