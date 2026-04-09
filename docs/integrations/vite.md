@@ -4,6 +4,8 @@ description: Плагин Vite для UnoCSS (@unocss/vite).
 outline: deep
 ---
 
+<!-- @unocss-ignore -->
+
 <script setup lang="ts">
 import { examples } from '../.vitepress/content'
 
