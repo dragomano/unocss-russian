@@ -68,7 +68,7 @@ const Presets: LinkItem[] = [
   { text: 'Иконки', link: '/presets/icons' },
   { text: 'Режим атрибутов', link: '/presets/attributify' },
   { text: 'Типографика', link: '/presets/typography' },
-  { text: 'Web-шрифты', link: '/presets/web-fonts' },
+  { text: 'Веб-шрифты', link: '/presets/web-fonts' },
   { text: 'Режим совместимости', link: '/presets/legacy-compat' },
   { text: 'Режим тегов', link: '/presets/tagify' },
   { text: 'Конвертация rem в px', link: '/presets/rem-to-px' },
