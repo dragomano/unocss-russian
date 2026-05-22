@@ -29,7 +29,7 @@ bun add -D @unocss/eslint-config
 
 :::
 
-В [стиле Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files-new):
+В [современном стиле ESLint](https://eslint.org/docs/latest/use/configure/configuration-files-new):
 
 ```js [eslint.config.js]
 import unocss from '@unocss/eslint-config/flat'
@@ -40,7 +40,7 @@ export default [
 ]
 ```
 
-В устаревшем стиле `.eslintrc`:
+В устаревшем стиле через файл `.eslintrc`:
 
 ```json [.eslintrc]
 {
@@ -52,21 +52,42 @@ export default [
 
 ## Правила {#rules}
 
-- `@unocss/order` — Обеспечивает соблюдение определённого порядка для селекторов классов.
-- `@unocss/order-attributify` — Обеспечивает соблюдение определённого порядка для селекторов режима атрибутов.
-- `@unocss/blocklist` — Запрещает использование определённых селекторов классов [Опционально].
-- `@unocss/enforce-class-compile` — Принуждает к использованию компиляции классов [Опционально].
+Префикс правил зависит от стиля конфигурации ESLint:
+
+- Современный стиль (`eslint.config.js`) : `unocss/<rule-name>`
+- Устаревший стиль (`.eslintrc`): `@unocss/<rule-name>`
+
+Доступные правила:
+
+- `order` — Обеспечивает соблюдение определённого порядка для селекторов классов.
+- `order-attributify` — Обеспечивает соблюдение определённого порядка для селекторов режима атрибутов.
+- `blocklist` — Запрещает использование определённых селекторов классов [Опционально].
+- `enforce-class-compile` — Принуждает к использованию компиляции классов [Опционально].
 
 ### Опции правил {#rule-options}
 
-#### `@unocss/order`
+#### `order`
 
 - `unoFunctions` (string[]) — помечает вызовы функций с совпадающими именами для применения этого правила. Это простые имена, не шаблоны, регистронезависимые. По умолчанию: `['clsx', 'classnames']`.
 - `unoVariables` (string[]) — помечает объявления переменных с совпадающими именами для применения этого правила. Это шаблоны регулярных выражений с флагом `i`. По умолчанию: `['^cls', 'classNames?$']`. Например, совпадет с именами переменных `clsButton` и `buttonClassNames`.
 
 ### Опциональные правила {#optional-rules}
 
-Эти правила не включены по умолчанию. Чтобы включить их, добавьте следующее в ваш `.eslintrc`:
+Эти правила не включены по умолчанию. Чтобы включить их, добавьте следующее в `eslint.config.js` или `.eslintrc`:
+
+```js [eslint.config.js]
+import unocss from '@unocss/eslint-config/flat'
+
+export default [
+  unocss,
+  {
+    rules: {
+      'unocss/<rule-name>': 'warn', // или "error",
+      'unocss/<another-rule-name>': ['warn' /* или "error" */, { /* параметры */ }],
+    },
+  },
+]
+```
 
 ```json [.eslintrc]
 {
