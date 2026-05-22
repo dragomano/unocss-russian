@@ -14,6 +14,17 @@ export default defineConfig({
       overlay: false,
     },
   },
+  build: {
+    rollupOptions: {
+      onwarn(warning, warn) {
+        if (warning.code === 'INVALID_ANNOTATION') {
+          return
+        }
+
+        warn(warning)
+      },
+    },
+  },
   plugins: [
     UnoCSS(),
     Components({
