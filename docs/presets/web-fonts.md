@@ -246,10 +246,64 @@ export default defineConfig({
 })
 ```
 
-Это загрузит файлы шрифтов в `public/assets/fonts` и будет раздавать их клиенту по пути `/assets/fonts`. При этом убедитесь, что лицензия шрифтов позволяет вам их распространять; инструмент не несет ответственности за любые юридические проблемы.
+Это загрузит файлы шрифтов в `public/assets/fonts` и будет отдавать их клиенту по пути `/assets/fonts`. При этом убедитесь, что лицензия шрифтов позволяет вам их распространять; инструмент не несет ответственности за любые юридические проблемы.
 
 ::: info
 
 Эта функция специфична для Node.js и не будет работать в браузере.
 
 :::
+
+## Добавление шрифтов в итоговую сборку {#emit-fonts-to-build-output}
+
+В CI-окружениях или при первой сборке шрифты, загруженные в директорию `public`, могут не успеть скопироваться в `dist` до завершения сборки. Чтобы шрифты гарантированно попадали в продакшен-сборку, используйте колбэк `onDownload` совместно с кастомным Vite-плагином.
+
+**vite.config.ts**
+
+```ts
+import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local'
+import { defineConfig } from 'vite'
+
+const emittedFonts = new Map()
+
+// 1. Создаём процессор с хуком onDownload
+export const fontProcessor = createLocalFontProcessor({
+  onDownload(filename, buf) {
+    emittedFonts.set(filename, buf)
+  }
+})
+
+export default defineConfig({
+  plugins: [
+    UnoCSS(),
+    // 2. Добавляем собранные шрифты как ресурсы во время сборки
+    {
+      name: 'unocss:font-emit',
+      apply: 'build',
+      generateBundle() {
+        for (const [filename, source] of emittedFonts) {
+          this.emitFile({ type: 'asset', fileName: `assets/fonts/${filename}`, source })
+        }
+        emittedFonts.clear()
+      }
+    },
+  ],
+})
+```
+
+**uno.config.ts**
+
+```ts
+import presetWebFonts from '@unocss/preset-web-fonts'
+import { fontProcessor } from './vite.config'
+
+export default defineConfig({
+  presets: [
+    presetWebFonts({
+      provider: 'google',
+      fonts: { sans: 'Roboto' },
+      processors: [fontProcessor],
+    }),
+  ],
+})
+```
