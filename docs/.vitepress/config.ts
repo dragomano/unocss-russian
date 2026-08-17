@@ -2,6 +2,7 @@ import { createRequire } from 'node:module'
 import { readFileSync } from 'node:fs'
 import type { DefaultTheme } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
+import { createTwoslasher } from '@unocss/twoslash'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 
@@ -55,9 +56,10 @@ const Integrations: LinkItem[] = [
   { text: 'CLI', link: '/integrations/cli' },
   { text: 'PostCSS', link: '/integrations/postcss' },
   { text: 'ESLint', link: '/integrations/eslint' },
+  { text: 'Twoslash', link: '/integrations/twoslash' },
+  { text: 'Поддержка LSP', link: '/integrations/lsp' },
   { text: 'Расширение VS Code', link: '/integrations/vscode' },
   { text: 'Плагин JetBrains IDE', link: '/integrations/jetbrains' },
-  { text: 'Поддержка LSP', link: '/integrations/lsp' },
   { text: 'Расширение Zed', link: '/integrations/zed' },
 ]
 
@@ -346,6 +348,10 @@ export default defineConfig({
       transformerTwoslash({
         processHoverInfo: info => info.replace(/_unocss_core\./g, ''),
       }),
+      transformerTwoslash({
+        langs: ['vue', 'html'],
+        twoslasher: createTwoslasher(),
+      }),
     ],
     config(md) {
       md.use(groupIconMdPlugin)
@@ -370,7 +376,9 @@ export default defineConfig({
     sidebarMenuLabel: 'Меню',
     returnToTopLabel: 'Вернуться к началу',
     langMenuLabel: 'Изменить язык',
-    lastUpdatedText: 'Последнее обновление',
+    lastUpdated: {
+      text: 'Последнее обновление',
+    },
     notFound: {
       title: 'СТРАНИЦА НЕ НАЙДЕНА',
       quote: 'Но если не менять направление и продолжать искать, то можно оказаться там, где надо.',
