@@ -27,7 +27,7 @@ const toggleDark = () => {
 
 Например:
 
-```html
+```html twoslash
 <!-- Базовая иконка якоря из Phosphor icons -->
 <div class="i-ph-anchor-simple-thin" />
 <!-- Оранжевый будильник из Material Design Icons -->
@@ -145,7 +145,7 @@ presetIcons({
 
 Например, `vscode-icons:file-type-light-pnpm` — это иконка с цветами (`svg` не содержит `currentColor`), которая будет отрендерена как фоновое изображение. Используйте `vscode-icons:file-type-light-pnpm?mask`, чтобы отрендерить её как изображение-маску и игнорировать её цвета.
 
-```html
+```html twoslash
 <div class="w-full flex items-center justify-center gap-x-4 text-4xl p-2 mt-4">
   <div class="i-vscode-icons:file-type-light-pnpm" />
   <div class="i-vscode-icons:file-type-light-pnpm?mask text-red-300" />
