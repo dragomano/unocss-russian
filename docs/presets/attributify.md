@@ -56,7 +56,7 @@ import { presetAttributify } from 'unocss'
 
 Представьте, что у вас есть кнопка, использующая утилиты Tailwind CSS. Когда список становится длинным, его становится очень трудно читать и поддерживать.
 
-```html
+```html twoslash
 <button
   class="bg-blue-400 hover:bg-blue-500 text-sm text-white font-mono font-light py-2 px-4 rounded border-2 border-blue-200 dark:bg-blue-500 dark:hover:bg-blue-600"
 >
@@ -66,7 +66,7 @@ import { presetAttributify } from 'unocss'
 
 С режимом атрибутов вы можете разделить утилиты по атрибутам:
 
-```html
+```html twoslash
 <button
   bg="blue-400 hover:blue-500 dark:blue-500 dark:hover:blue-600"
   text="sm white"
@@ -86,13 +86,13 @@ import { presetAttributify } from 'unocss'
 
 Например:
 
-```html
+```html twoslash
 <button class="border border-red">Кнопка</button>
 ```
 
 Может быть записано как:
 
-```html
+```html twoslash
 <button border="~ red">Кнопка</button>
 ```
 
@@ -102,13 +102,13 @@ import { presetAttributify } from 'unocss'
 
 Например:
 
-```html
+```html twoslash
 <div class="m-2 rounded text-teal-400" />
 ```
 
 теперь может быть
 
-```html
+```html twoslash
 <div m-2 rounded text-teal-400 />
 ```
 
