@@ -42,6 +42,7 @@ const Configs: LinkItem[] = [
   { text: 'Слои', link: '/config/layers' },
   { text: 'Пресеты', link: '/config/presets' },
   { text: 'Трансформеры', link: '/config/transformers' },
+  { text: 'Процессоры', link: '/config/processors' },
   { text: 'Автодополнение', link: '/config/autocomplete' },
 ]
 
@@ -88,6 +89,10 @@ const Extractors: LinkItem[] = [
   { text: 'Экстрактор MDC', link: '/extractors/mdc' },
   { text: 'Экстрактор Svelte', link: '/extractors/svelte' },
   { text: 'Экстрактор произвольных вариантов ', link: '/extractors/arbitrary-variants' },
+]
+
+const Processors: LinkItem[] = [
+  { text: 'Lightning CSS', link: '/processors/lightningcss' },
 ]
 
 const Tools: LinkItem[] = [
@@ -172,8 +177,12 @@ const Nav: DefaultTheme.NavItem[] = [
         text: 'Экстракторы',
         items: Extractors,
       },
+      {
+        text: 'Процессоры',
+        items: Processors,
+      },
     ],
-    activeMatch: '^/(presets|transformers|extractors)/',
+    activeMatch: '^/(presets|transformers|extractors|processors)/',
   },
   {
     text: 'Ресурсы',
@@ -259,6 +268,11 @@ const SidebarPresets: DefaultTheme.SidebarItem[] = [
     items: Extractors,
   },
   {
+    text: 'Процессоры',
+    collapsed: false,
+    items: Processors,
+  },
+  {
     text: 'Другие пакеты',
     collapsed: false,
     items: Tools,
@@ -334,6 +348,7 @@ export default defineConfig({
   ],
 
   markdown: {
+    languages: ['html', 'vue'],
     theme: {
       light: 'vitesse-light',
       dark: 'vitesse-dark',
@@ -414,6 +429,7 @@ export default defineConfig({
       '/presets/': SidebarPresets,
       '/transformers/': SidebarPresets,
       '/extractors/': SidebarPresets,
+      '/processors/': SidebarPresets,
       '/config/': SidebarConfig,
     },
     editLink: {
