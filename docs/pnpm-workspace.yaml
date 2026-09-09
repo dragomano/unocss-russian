@@ -3,7 +3,7 @@ allowBuilds:
 
 minimumReleaseAgeExclude:
   - '@unocss/*'
-  - unocss@66.7.2 || 66.9.2 || 66.10.0
+  - unocss@66.7.2 || 66.9.2 || 66.10.0 || 66.10.1
   - '@types/node@26.4.1'
   - '@devframes/service-shiki@0.9.11'
   - '@devframes/vite@0.9.11'
