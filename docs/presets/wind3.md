@@ -60,7 +60,7 @@ import { presetWind3 } from 'unocss'
 
 Основная цель этого пресета — обеспечить совместимость с [Tailwind CSS](https://tailwindcss.com/) и [Windi CSS](https://windicss.org/). Следует отметить, что полная совместимость не гарантируется. Подробную информацию об использовании см. в их [документации](https://tailwindcss.com/docs).
 
-Полный список правил и пресетов, включенных в этот пресет, можно найти в нашей <a href="/interactive/" target="_blank">интерактивной документации</a> или непосредственно в [исходном коде](https://github.com/unocss/unocss/tree/main/packages-presets/preset-wind3).
+Полный список правил и пресетов, включенных в этот пресет, можно найти в нашей <a href="https://unocss.dev/interactive/" target="_blank">интерактивной документации</a> или непосредственно в [исходном коде](https://github.com/unocss/unocss/tree/main/packages-presets/preset-wind3).
 
 ## Возможности {#features}
 

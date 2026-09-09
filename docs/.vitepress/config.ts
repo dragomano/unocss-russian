@@ -103,8 +103,8 @@ const Tools: LinkItem[] = [
 ]
 
 const Resources: LinkItem[] = [
-  { text: 'Интерактив', link: '/interactive/', target: '_blank' },
-  { text: 'Песочница', link: '/play/', target: '_blank' },
+  { text: 'Интерактив', link: 'https://unocss.dev/interactive/', target: '_blank' },
+  { text: 'Песочница', link: 'https://unocss.dev/play/', target: '_blank' },
   { text: 'Учебник', link: 'https://tutorial.unocss.dev/', target: '_blank' },
 ]
 

@@ -92,7 +92,7 @@ export default defineConfig({
 
 ## Песочница {#play}
 
-Попробовать UnoCSS можно прямо в браузере в <a href="/play/" target="_blank">песочнице</a>. Или посмотреть утилиты из пресетов по умолчанию в <a href="/interactive/" target="_blank">интерактиве</a>.
+Попробовать UnoCSS можно прямо в браузере в <a href="https://unocss.dev/play/" target="_blank">песочнице</a>. Или посмотреть утилиты из пресетов по умолчанию в <a href="https://unocss.dev/interactive/" target="_blank">интерактиве</a>.
 
 ## Интеграции {#integrations}
 
