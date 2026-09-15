@@ -254,6 +254,14 @@ export default defineConfig({
 })
 ```
 
+Для глобального режима по умолчанию в SvelteKit нет точки входа `main.ts`. Импортируйте сгенерированную таблицу стилей из корневого макета:
+
+```svelte [src/routes/+layout.svelte]
+<script>
+  import 'virtual:uno.css'
+</script>
+```
+
 <ContentExample :item="playgrounds['sveltekit']"  class="Link mb-4" integrations />
 
 <ContentExample :item="playgrounds['sveltekit-preprocess']"  class="Link mb-4" integrations />
