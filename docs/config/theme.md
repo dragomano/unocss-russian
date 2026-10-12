@@ -93,7 +93,7 @@ theme: {
 ::: tip
 В `presetWind4` ключ был изменен на `breakpoint`.
 
-[Документация по теме `presetWind4`](/presets/wind4#theme).
+Документацию по теме `presetWind4` см. в [разделе «Тема `presetWind4`»](/presets/wind4#theme).
 :::
 
 Если вы хотите унаследовать контрольные точки исходной темы (`original`), вы можете использовать `extendTheme`:
