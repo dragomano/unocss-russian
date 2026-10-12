@@ -258,6 +258,16 @@ transformerDirectives({
 }
 ```
 
+Это работает и в условиях `at-rule`:
+
+```css
+@media (min-width: theme('breakpoints.md')) {
+  .btn-blue {
+    background-color: theme('colors.blue.500');
+  }
+}
+```
+
 ### `icon()`
 
 Используйте функцию `icon()` для преобразования утилиты иконки в конкретную svg-иконку.
