@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 export default defineConfig({
+  publicDir: '../public',
   optimizeDeps: {
     exclude: [
       'vitepress',
@@ -29,8 +30,9 @@ export default defineConfig({
     UnoCSS(),
     Components({
       dirs: [
-        '.vitepress/theme/components',
+        '../.vitepress/theme/components',
       ],
+      dts: '../components.d.ts',
       include: [
         /\.vue$/,
         /\.vue\?vue/,

@@ -10,5 +10,11 @@
     "lib": ["ES2022", "DOM"],
     "skipLibCheck": true
   },
-  "include": [".vitepress/config.ts"]
+  "include": [
+    ".vitepress/**/*.ts",
+    "components.d.ts",
+    "env.d.ts",
+    "uno.config.ts",
+    "vite.config.ts"
+  ]
 }

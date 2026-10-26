@@ -11,7 +11,7 @@ import {
   VPTeamPageSection,
   VPTeamMembers
 } from 'vitepress/theme'
-import { teamMembers, teamEmeritiMembers } from './.vitepress/contributors'
+import { teamMembers, teamEmeritiMembers } from '../.vitepress/contributors'
 </script>
 
 <VPTeamPage>

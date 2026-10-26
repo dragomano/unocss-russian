@@ -7,7 +7,7 @@ outline: deep
 <!-- @unocss-ignore -->
 
 <script setup lang="ts">
-import { examples } from '../.vitepress/content'
+import { examples } from '../../.vitepress/content'
 
 const playgrounds = examples.reduce((acc, cur) => {
   acc[cur.name] = cur

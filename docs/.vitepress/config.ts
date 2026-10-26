@@ -293,6 +293,7 @@ const SidebarConfig: DefaultTheme.SidebarItem[] = [
 ]
 
 export default defineConfig({
+  srcDir: 'src',
   base: '/unocss-russian/',
   lang: 'ru',
   locales: {
@@ -375,7 +376,8 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [],
+    configFile: 'vite.config.ts',
+    publicDir: '../public',
   },
 
   themeConfig: {
@@ -434,7 +436,7 @@ export default defineConfig({
       '/config/': SidebarConfig,
     },
     editLink: {
-      pattern: 'https://github.com/dragomano/unocss-russian/edit/main/docs/:path',
+      pattern: 'https://github.com/dragomano/unocss-russian/edit/main/docs/src/:path',
       text: 'Предложить изменения для этой страницы',
     },
     socialLinks: [
