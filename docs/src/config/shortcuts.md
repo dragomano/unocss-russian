@@ -16,7 +16,7 @@ shortcuts: {
   // шорткаты для нескольких утилит
   'btn': 'py-2 px-4 font-semibold rounded-lg shadow-md',
   'btn-green': 'text-white bg-green-500 hover:bg-green-700',
-  // псевдоним (алиас) для одной утилиты
+  // псевдоним для одной утилиты
   'red': 'text-red-100',
 }
 ```

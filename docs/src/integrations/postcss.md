@@ -155,7 +155,7 @@ at-правило (at-rule) `@unocss` является плейсхолдеро�
 /* ... */
 ```
 
-#### Поддержка вариантов Breakpoint {#breakpoint-variant-support}
+#### Поддержка вариантов контрольных точек {#breakpoint-variant-support}
 
 `@screen` также поддерживает варианты `lt` и `at`
 

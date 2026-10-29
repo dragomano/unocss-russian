@@ -39,7 +39,7 @@ UnoCSS — это монорепозиторий, содержащий неск�
 | [@unocss/nuxt](/integrations/nuxt)                                   | Модуль Nuxt                                       | Нет                 | -            |
 | [@unocss/svelte-scoped](/integrations/svelte-scoped)                 | Плагин Vite для Svelte Scoped + Препроцессор      | Нет                 | -            |
 | [@unocss/next](/integrations/next)                                   | Плагин Next.js                                    | Нет                 | -            |
-| [@unocss/runtime](/integrations/runtime)                             | CSS-in-JS Runtime для UnoCSS                      | Нет                 | -            |
+| [@unocss/runtime](/integrations/runtime)                             | CSS-in-JS рантайм для UnoCSS                      | Нет                 | -            |
 | [@unocss/eslint-plugin](/integrations/eslint)                        | Плагин ESLint                                     | Нет                 | -            |
 | [@unocss/eslint-config](/integrations/eslint)                        | Конфигурация ESLint                               | Нет                 | -            |
 | [@unocss/postcss](/integrations/postcss)                             | Плагин PostCSS                                    | Нет                 | -            |

@@ -45,7 +45,7 @@ features:
     linkText: "Подробнее"
   - icon: <span class="i-carbon-asset"></span>
     title: Шорткаты
-    details: "Динамическое создание алиасов и группировка утилит"
+    details: "Динамическое создание псевдонимов и группировка утилит"
     link: /config/shortcuts
     linkText: "Настройка и использование"
   - icon: <span class="i-carbon:code"></span>

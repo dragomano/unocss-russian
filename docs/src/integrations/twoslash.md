@@ -49,7 +49,7 @@ export default defineConfig({
 <div class="p-4 text-red"></div>
 ```
 
-## Параметры {#options}
+## Опции {#options}
 
 ### `configPath`
 

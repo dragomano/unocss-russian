@@ -1,10 +1,10 @@
 ---
-title: UnoCSS CDN Runtime
+title: CDN рантайм UnoCSS
 description: CSS-in-JS рантайм для UnoCSS (@unocss/runtime).
 outline: deep
 ---
 
-# Runtime (среда выполнения) {#runtime}
+# Рантайм (среда выполнения) {#runtime}
 
 Рантайм UnoCSS предоставляет CDN-сборку, которая запускает UnoCSS прямо в браузере. Она отслеживает изменения DOM и генерирует стили «на лету».
 
